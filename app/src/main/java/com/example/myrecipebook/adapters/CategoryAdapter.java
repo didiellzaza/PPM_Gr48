@@ -20,15 +20,13 @@ import com.squareup.picasso.Picasso;
 import java.io.Serializable;
 import java.util.List;
 
-//ADAPTER + VIEWHOLDER
 
-//5.ADAPTER class (manage all the viewHolders)
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 
     Context context;
     List<DetailRecipeModel> categoryList;
 
-    //CTOR
+    
     public CategoryAdapter(Context context, List<DetailRecipeModel> categoryList) {
         this.context = context;
         this.categoryList = categoryList;
@@ -40,7 +38,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.category_item, parent, false ));
     }
 
-    //Bind data to line
+  
     //(bind the items with each item of the oneCategoryList list which than will be shown in recycler view)
     @Override
     public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
